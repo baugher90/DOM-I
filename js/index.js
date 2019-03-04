@@ -56,9 +56,11 @@ const codeImg = document.getElementById('cta-img').setAttribute('src', siteConte
 const topButton = document.querySelector('button').textContent = siteContent["cta"]["button"];
 
 //=============================================================================Main Content
-//-----------------------------
-//-----------------------------
-//-----------------------------
+//-----------------------------Img
+const codeImg2 = document.getElementById(`middle-img`).src = siteContent["main-content"]["middle-img-src"];
+//-----------------------------Headers
+
+//-----------------------------Content
 //=============================================================================Contact information
 //-----------------------------
 //-----------------------------
