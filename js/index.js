@@ -43,17 +43,18 @@ const siteContent = {
 
 //=============================================================================Nav
 //-----------------------------Logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-src"])
 //-----------------------------Navigation
-const nav = document.querySelectorAll('a');
-nav.forEach((e,i)=>(e.textContent = siteContent.nav[`nav-item-${i+1}`]));
+const nav = document.querySelectorAll('a').forEach((e,i)=>(e.textContent = siteContent.nav[`nav-item-${i+1}`]));
 
 //=============================================================================Landing Content
 //-----------------------------Header
+const h1Cont = document.querySelector(`h1`).innerText = siteContent["cta"]["h1"];;
+//-----------------------------Button
+const codeImg = document.getElementById('cta-img').setAttribute('src', siteContent["cta"]["img-src"]);
+//-----------------------------Img
+const topButton = document.querySelector('button').textContent = siteContent["cta"]["button"];
 
-//-----------------------------
-//-----------------------------
 //=============================================================================Main Content
 //-----------------------------
 //-----------------------------
