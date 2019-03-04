@@ -46,12 +46,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 //-----------------------------Navigation
-
-//-----------------------------
-//-----------------------------
+const nav = document.querySelectorAll('a');
+nav.forEach((e,i)=>(e.textContent = siteContent.nav[`nav-item-${i+1}`]));
 
 //=============================================================================Landing Content
-//-----------------------------
+//-----------------------------Header
+
 //-----------------------------
 //-----------------------------
 //=============================================================================Main Content
