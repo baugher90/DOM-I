@@ -13,7 +13,7 @@ const siteContent = {
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
-  "main-content": {
+  "mainContent": {
     "features-h4":"Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "about-h4":"About",
@@ -43,24 +43,39 @@ const siteContent = {
 
 //=============================================================================Nav
 //-----------------------------Logo
-let logo = document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-src"])
+let logo = document.getElementById("logo-img").setAttribute('src', siteContent["nav"]["img-src"]);
 //-----------------------------Navigation
 const nav = document.querySelectorAll('a').forEach((e,i)=>(e.textContent = siteContent.nav[`nav-item-${i+1}`]));
 
 //=============================================================================Landing Content
 //-----------------------------Header
-const h1Cont = document.querySelector(`h1`).innerText = siteContent["cta"]["h1"];;
+const h1Cont = document.querySelector(`h1`).innerText = siteContent[`cta`][`h1`];;
 //-----------------------------Button
-const codeImg = document.getElementById('cta-img').setAttribute('src', siteContent["cta"]["img-src"]);
+const codeImg = document.getElementById(`cta-img`).setAttribute(`src`, siteContent[`cta`][`img-src`]);
 //-----------------------------Img
-const topButton = document.querySelector('button').textContent = siteContent["cta"]["button"];
+const topButton = document.querySelector(`button`).textContent = siteContent[`cta`][`button`];
 
 //=============================================================================Main Content
 //-----------------------------Img
-const codeImg2 = document.getElementById(`middle-img`).src = siteContent["main-content"]["middle-img-src"];
+const codeImg2 = document.getElementById(`middle-img`).src = siteContent.mainContent[`middle-img-src`];
 //-----------------------------Headers
+const mainContent = document.querySelectorAll(`h4`);
+
+mainContent[0].textContent = siteContent.mainContent[`features-h4`];
+mainContent[1].textContent = siteContent.mainContent[`about-h4`];
+mainContent[2].textContent = siteContent.mainContent[`services-h4`];
+mainContent[3].textContent = siteContent.mainContent[`product-h4`];
+mainContent[4].textContent = siteContent.mainContent[`vision-h4`];
 
 //-----------------------------Content
+const mainText = document.querySelectorAll(`p`);
+
+mainText[0].textContent = siteContent.mainContent[`features-content`];
+mainText[1].textContent = siteContent.mainContent[`about-content`];
+mainText[2].textContent = siteContent.mainContent[`services-content`];
+mainText[3].textContent = siteContent.mainContent[`product-content`];
+mainText[4].textContent = siteContent.mainContent[`vision-content`];
+
 //=============================================================================Contact information
 //-----------------------------
 //-----------------------------
